@@ -3,12 +3,11 @@ package demo.util;
 import com.mysql.jdbc.Driver;
 
 import java.sql.*;
-
 /**
- * Created by 高伟冬 on 2017/6/10.
+ * Created by 高伟冬 on 2017/6/14.
  * ip_1702
- * 10:27
- * 星期六
+ * 17:13
+ * 星期三
  */
 public class Db {
 
@@ -24,10 +23,17 @@ public class Db {
         return null;
     }
 
-    public static void close(ResultSet resultSet, Connection connection) {
+    public static void close(ResultSet resultSet, PreparedStatement preparedStatement, Connection connection) {
         if (resultSet != null) {
             try {
                 resultSet.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if (preparedStatement != null) {
+            try {
+                preparedStatement.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

@@ -13,21 +13,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>ip查询</title>
+    <title>Title</title>
 </head>
 <body>
-<form action="index.jsp" method="post">
-    <h1>IP SEARCH</h1>
-    <input type="text" placeholder="请输入您要查询的IP地址">
+<form action="ip" method="post">
+    <input type="text" name="ip">
     <input type="submit" value="查询">
 </form>
-<p>
-    <%
-        String message = (String) request.getAttribute("message");
-        if (message != null) {
-            out.println(message);
-        }
-    %>
-</p>
+${sessionScope.geo}
 </body>
 </html>

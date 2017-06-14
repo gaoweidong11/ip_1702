@@ -6,6 +6,8 @@ CREATE TABLE db_exam.ip (
   max VARCHAR(255) COMMENT '终止 IP 地址',
   geo VARCHAR(255) COMMENT '地理位置'
 );
+
+USE db_exam;
 #
 # SELECT count(*)
 # FROM db_1702.ip;  -- 输出数据的个数
